@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_test.c                                  :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyerpark <hyerpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/29 00:13:22 by hyerpark          #+#    #+#             */
-/*   Updated: 2021/03/29 01:03:57 by hyerpark         ###   ########.fr       */
+/*   Created: 2021/03/30 12:51:53 by hyerpark          #+#    #+#             */
+/*   Updated: 2021/03/31 04:38:27 by hyerpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,38 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-int		main(void)
+void	put_char(int n1, int n2)
 {
-	char alpha;
+	char num[5];
 
-	alpha = 'T';
-	ft_putchar(alpha);
+	num[0] = n1 / 10 + '0';
+	num[1] = n1 % 10 + '0';
+	num[2] = ' ';
+	num[3] = n2 / 10 + '0';
+	num[4] = n2 % 10 + '0';
+	write(1, &num, 5);
+}
+
+void	ft_print_comb2(void)
+{
+	int n1;
+	int n2;
+
+	n1 = -1;
+	while (++n1 <= 98)
+	{
+		n2 = n1;
+		while (++n2 <= 99)
+		{
+			if (n1 < n2)
+			{
+				put_char(n1, n2);
+				if (!(n1 == 98 && n2 == 99))
+				{
+					ft_putchar(',');
+					ft_putchar(' ');
+				}
+			}
+		}
+	}
 }
