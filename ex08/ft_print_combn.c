@@ -6,7 +6,7 @@
 /*   By: hyerpark <hyerpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/30 22:04:37 by hyerpark          #+#    #+#             */
-/*   Updated: 2021/03/31 04:32:17 by hyerpark         ###   ########.fr       */
+/*   Updated: 2021/03/31 17:32:00 by hyerpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ void	print_num(int prev, int n)
 		write(1, ", ", 2);
 		return ;
 	}
-	if (prev == 9)
-		return ;
 	i = prev;
 	while (++i <= 10 - g_len + n)
 	{
