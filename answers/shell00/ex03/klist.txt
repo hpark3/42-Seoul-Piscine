@@ -1,0 +1,6 @@
+Credentials cache: API:19A90AED-8839-4EDD-A24C-F4DAFC3F6CAA
+        Principal: hyerpark@42SEOUL.KR
+
+  Issued                Expires               Principal
+Mar 23 21:41:15 2021  Mar 24 07:41:15 2021  krbtgt/42SEOUL.KR@42SEOUL.KR
+Mar 23 21:41:16 2021  Mar 24 07:41:15 2021  HTTP/student-storage.42seoul.kr@42SEOUL.KR
